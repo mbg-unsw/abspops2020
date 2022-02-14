@@ -1,6 +1,6 @@
-% Method of the month: The Newey-West estimator and interrupted time series
-% (c) 2021 Malcolm Gillies <malcolm.gillies@unsw.edu.au>
-% https://github.com/mbg-unsw/neweywest
+% Method of the month: Australian COVID-19-related population changes in 2020
+% (c) 2022 Malcolm Gillies <malcolm.gillies@unsw.edu.au>
+% https://github.com/mbg-unsw/abspops2020
 %
 % This work is licensed under a
 % Creative Commons Attribution-NonCommercial-ShareAlike 4.0
@@ -27,9 +27,9 @@
 \setbeamertemplate{navigation symbols}{} % remove navigation symbols
 \setbeamercolor*{item}{fg=darkred}
 
-\title{``Method of the month'': The Newey--West estimator and interrupted time series}
+\title{``Method of the month'': Australian COVID-19-related population changes in 2020}
 \author{Malcolm Gillies}
-\date{20 May 2021}
+\date{17 Feb 2022}
 \usebackgroundtemplate{%
 \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=south west,scale=1,rotate=90] at ([shift={(0cm,0cm)}]current page marginpar area.south east) {\gitMark};
@@ -67,19 +67,19 @@
 \begin{frame}{Is anyone else using it?}
 	\begin{itemize}
 		\item Review of ITS in healthcare
-		\citep{hudson_methodology_2019}
+		%\citep{hudson_methodology_2019}
 		\begin{itemize}
 			\item 2/116 studies published in 2015 used N--W
 		\end{itemize}
 		\item Review of ITS studies of public health interventions
-		\citep{turner_design_2020}
+		%\citep{turner_design_2020}
 		\begin{itemize}
 			\item 2/200 studies publishd 2013--17 used N--W
 		\end{itemize}
 	\end{itemize}
 \end{frame}
 
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{ref/newey-west-cites.PNG}}
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{ref/newey-west-cites.PNG}}
 \begin{frame}[plain,b]
 \begin{flushright}\texttt{https://app.dimensions.ai/}\end{flushright}
 \end{frame}
@@ -89,7 +89,7 @@
 \begin{frame}{Empirical comparison 1}
 	\begin{itemize}
 		\item Simulation study
-		\citep{turner_evaluation_2020}
+		%\citep{turner_evaluation_2020}
 		\item Models fit with six methods:
 		\begin{itemize}
 			\item OLS, OLS/N--W, GLS/P--W, REML, REML/Satterthwaite, ARIMA
@@ -107,7 +107,7 @@
 \begin{frame}{Empirical comparison 2}
 	\begin{itemize}
 		\item Published ITS studies (\( n=190 \), median \(T=48\))
-		\citep{turner_comparison_2020}
+		%\citep{turner_comparison_2020}
 		\item Data re-fit with six methods:
 		\begin{itemize}
 			\item OLS, OLS/N--W, GLS/P--W, REML, REML/Satterthwaite, ARIMA
@@ -134,7 +134,7 @@
 \begin{frame}{What do the econometricians say?}
 HAR Inference: Recommendations for Practice
 
-\cite{lazarus_har_2018}
+%\cite{lazarus_har_2018}
 \end{frame}
 
 \begin{frame}{Thanks}
@@ -144,10 +144,8 @@ HAR Inference: Recommendations for Practice
 \end{frame}
 
 \begin{frame}{References}
-%        \bibliographystyle{apalike}
-%        \bibliographystyle{abbrv}
-        \tiny\bibliography{nw.bib}
-        \bibliographystyle{abbrvnat}
+%        \tiny\bibliography{nw.bib}
+%        \bibliographystyle{abbrvnat}
 \end{frame}
 
 \end{document}
