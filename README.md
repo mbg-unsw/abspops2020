@@ -1,11 +1,10 @@
-# Method of the month: The Newey-West estimator and interrupted time series
-A ten-minute rough-and-ready talk introducing the Newey-West
-heteroskedasticity- and autocorrelation-robust estimator for a non-technical
-audience and assessing how useful it is for interrupted time series
-analysis of health policy interventions.
+# Method of the month: Australian population changes in the time of COVID-19
+A ten-minute talk looking at Australian population statistics for 2020,
+considering historical trends, decomposition by age, immigration flows,
+and Medicare eligibility.
 
 Delivered to the Medicines Policy Research Unit monthly Work In Progress
-meeting on 20 May 2021.
+meeting on 17 Feb 2022.
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
