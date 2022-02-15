@@ -44,41 +44,23 @@
 \end{frame}
 }
 
-\begin{frame}{What is the Newey--West estimator?}
+\begin{frame}{Wait, did something happen in 2020?}
 	\begin{itemize}
-		\item Time series data are often \emph{autocorrelated}
-		\item This messes up inference e.g. 95\% CI too small
-		\item You can model the correlation structure e.g. ARIMA
-		\item Or use a Heteroskedasticity- and Autocorrelation-Robust (aka HAC) method
-		\begin{itemize}
-			\item e.g. Newey--West (1987) or Newey--West (1994)
-		\end{itemize}
+		\item Surprising interest in comparing e.g.
+			\begin{itemize}
+				\item Rates in 2019 vs Rates in 2020
+			\end{itemize}
+		\item No problem, ABS will provide the denominators\dots
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{How do I do use it?}
-\texttt{library(sandwich)} \\
-\texttt{library(lmtest)} \\
-\medskip
-\texttt{ts.lm <- lm(log(cnt)\textasciitilde 1+step+trend, data=tss)} \\
-\texttt{coeftest(ts.lm2, df=Inf, vcov. = NeweyWest(ts.lm2, adjust=TRUE))}
+\begin{frame}{ABS Estimated Resident Population: Projected vs Reported}
 \end{frame}
 
-\begin{frame}{Is anyone else using it?}
-	\begin{itemize}
-		\item Review of ITS in healthcare
-		%\citep{hudson_methodology_2019}
-		\begin{itemize}
-			\item 2/116 studies published in 2015 used N--W
-		\end{itemize}
-		\item Review of ITS studies of public health interventions
-		%\citep{turner_design_2020}
-		\begin{itemize}
-			\item 2/200 studies publishd 2013--17 used N--W
-		\end{itemize}
-	\end{itemize}
-\end{frame}
+\begin{frame}{ABS components of population growth}
 
+	\center\includegraphics[height=0.8\textheight]{ref/pop-components.PNG}
+\end{frame}
 %\usebackgroundtemplate{\includegraphics[width=\paperwidth]{ref/newey-west-cites.PNG}}
 \begin{frame}[plain,b]
 \begin{flushright}\texttt{https://app.dimensions.ai/}\end{flushright}
@@ -86,60 +68,18 @@
 \usebackgroundtemplate{}
 
 
-\begin{frame}{Empirical comparison 1}
-	\begin{itemize}
-		\item Simulation study
-		%\citep{turner_evaluation_2020}
-		\item Models fit with six methods:
-		\begin{itemize}
-			\item OLS, OLS/N--W, GLS/P--W, REML, REML/Satterthwaite, ARIMA
-		\end{itemize}
-		\item AR(1) data, N--W \texttt{lag=1}
-		\item For inference \( T=48 \)
-		\begin{itemize}
-			\item ARIMA coverage OK
-			\item REML similar to ARIMA, REML/Satterthwaite >100\% coverage
-			\item \textbf{N--W poor coverage}
-		\end{itemize}
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{Empirical comparison 2}
-	\begin{itemize}
-		\item Published ITS studies (\( n=190 \), median \(T=48\))
 		%\citep{turner_comparison_2020}
-		\item Data re-fit with six methods:
-		\begin{itemize}
-			\item OLS, OLS/N--W, GLS/P--W, REML, REML/Satterthwaite, ARIMA
-		\end{itemize}
-		\item For inference
-		\begin{itemize}
-			\item REML/Satterthwaite most conservative
-			\item ARIMA 2nd most conservative
-			\item REML 3rd most conservative
-		\end{itemize}
+
+\begin{frame}{Finally}
+	\begin{itemize}
+		\item Remember they're \emph{estimated} resident populations
+		\item As 2021 census results become available, 2017--2020 will be adjusted
 	\end{itemize}
-\end{frame}
-
-\begin{frame}{Bottom line}
-    \begin{itemize}
-        \item Don't use N--W (1987) with \texttt{lag=1}
-        \item N--W (1994) with small sample adjustment might be OK
-		\item AR(1) with REML estimation sounds good. How do we do it?
-        \item Post-Newey--West methods tantalizingly close!
-		\item Maybe stick with ARIMA after all?
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{What do the econometricians say?}
-HAR Inference: Recommendations for Practice
-
-%\cite{lazarus_har_2018}
 \end{frame}
 
 \begin{frame}{Thanks}
     \begin{itemize}
-        \item Andrea
+        \item Juliana
     \end{itemize}
 \end{frame}
 
